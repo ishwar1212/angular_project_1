@@ -1,0 +1,48 @@
+<div class="py-20 text-dark container">
+
+    <h1 class="text-lg font-weight-bold text-center mt-5 mb-3">My Orders</h1>
+
+    <div class="row d-flex justify-content-between aling-item-center">
+
+        <div class="col-lg-2 col-sm-12 py-20 mb-3 ">
+
+            <div class="">
+
+                <div *ngFor="let option of orderFilter">
+
+                    <div class="d-flex aling-item-center pl-4">
+
+                        <mat-checkbox [id]="option.value" [value]="option.value">
+
+                            <span class="text-sm text-gray">
+                                {{option.label}}
+                            </span>
+
+                        </mat-checkbox>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+         
+
+        </div>
+        <div class="col-lg-10 col-sm-12 space-y-5 ">
+
+            <div class="space-y-5 " *ngFor="let item of orders">
+
+                <div (click)="navigateToOrderDetails()" *ngFor="let orderItem of item" class="cursor-pointer">
+
+                    <app-order-card/>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

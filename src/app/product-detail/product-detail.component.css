@@ -1,0 +1,11 @@
+.product-detail{
+    margin-top: 80px;
+}
+.text{
+    padding-left: 8px ;
+    padding-right: 8px;
+    text-decoration: line-through;
+}
+.opacity-60{
+    padding-left: 4px;
+}

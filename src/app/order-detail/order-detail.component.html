@@ -1,0 +1,33 @@
+<div class="order-stetus  text-dark ">
+
+    <div class="mb-3">
+
+        <h2 class="text-center">Order Status</h2>
+
+        <app-order-tracker activeStep="PLACED" [steps]="steps"/>
+
+    </div>
+
+    <div class="pt-10 mt-3 ">
+
+        <div class="box">
+
+             <h1 class="text-lg font-semibold py-5">Shopping Address</h1>
+
+             <app-address-card/>
+
+        </div>
+
+        <div class="mt-20">
+
+        <div *ngFor="let orderItem of orders">
+
+            <app-order-card/>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

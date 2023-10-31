@@ -1,0 +1,13 @@
+<form (ngSubmit)="createProduct()">
+    <input type="text" [(ngModel)]="product.name" name="name" placeholder="Product Name">
+    <input type="number" [(ngModel)]="product.price" name="price" placeholder="Price">
+    <textarea [(ngModel)]="product.description" name="description" placeholder="Description"></textarea>
+    <input type="text" [(ngModel)]="product.brand" name="brand" placeholder="brand">
+   
+  
+    <button type="submit">Create Product</button>
+  </form>
+  
+  
+  
+  

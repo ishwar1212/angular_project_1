@@ -1,0 +1,204 @@
+<div class="p-5 mt-10 product-detail">
+
+    <section class="row">
+
+        <div class="col-lg-6 d-flex align-items-center">
+
+            <img src="../../assets/images/mobiles/iphone.jpg" alt="">
+
+        </div>
+
+        <div class="col-lg-6 space-y-10 lg:mt-0">
+
+            <div class="space-y-2 ">
+
+                
+                <p class="text-xl ">iPhone 14 pro max</p>
+
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <p class="">80,000</p>
+                <p class="text text-dark ">90,000</p>
+                <p class="text-success font-semibold ">-10%</p>
+
+            </div>
+           
+            <div class="mb-5">
+                <button color="accent" style="padding:1.5rem;" class="w-100" (click)="hanadleAddToCart()" mat-raised-button>Add To Cart</button>
+            </div>
+            <div>
+                <p class="text-darl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente doloremque, reprehenderit neque accusantium perspiciatis quidem dolorem repellat, quia a, perferendis voluptatem dicta harum voluptatibus consequuntur.</p>
+                <p class="text-dark">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla labore sapiente voluptas error, nostrum, fuga ullam itaque repudiandae consectetur perferendis nesciunt aliquam praesentium, placeat asperiores.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="pt-20 pb-10">
+        <h1 class="pb-4">Recent Review & Ratings</h1>
+
+        <div class="border">
+
+            <div class="row">
+
+                <div class="col-lg-7">
+
+                    <div class="space-y-5">
+                        <div *ngFor="let item of reviews">
+
+                            <app-product-review/>
+    
+                        </div>
+                    </div>
+
+                </div>
+                 
+                <div class="col-lg-5 col-sm-12 mt-10">
+
+                    <div class="box">
+
+                        <h1 class="pb-1">Product Ratings</h1>
+
+                        <div class="d-flex align-items-center ">
+                            
+                            <app-star-rating/>
+
+                            <p class="opacity-60 "> 46537 Ratings</p>
+
+                        </div>
+                        <div class="">
+
+                            <div>
+                                <div class="row justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Excellent</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="40">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">12345</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row  justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Excellent</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="80">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">12345</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Very Good</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="60">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">12345</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Good</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="30">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">2345</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row  justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Avarage</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="40">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">12345</span>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row justify-content-around align-items-center">
+                                    <div class="col-lg-2">
+                                        <span>Poor</span>
+
+                                    </div>
+                                    <div class="col-lg-8 px-4">
+                                        <mat-progress-bar mode="determinate" value="20">
+
+                                        </mat-progress-bar>
+
+                                    </div>
+                                    <div class="col-lg-2"></div>
+                                    <span class="opacity-50">345</span>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="mt-10">
+
+        <h1 class="py-5 text-dark">Related Products</h1>
+
+        <div class="d-flex">
+
+            <div *ngFor="let item of relatedProducts">
+
+                <app-products-card />
+            </div>
+
+        </div>
+
+    </section>
+
+</div>

@@ -1,0 +1,14 @@
+.order-card-img{
+    object-fit: cover;
+    overflow: hidden;
+}
+.font-weight-bold{
+    font-weight: 600;
+}
+@media screen and(max-width:400px){
+    .order-card-img img{
+        height: 140px;
+        object-fit: cover;
+    }
+ 
+}

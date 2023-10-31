@@ -1,0 +1,34 @@
+<div class=" d-flex justify-content-between space-x-8 py-20 w-100">
+
+    <div *ngFor="let step of steps; let index=index ; let last =last"
+     class="d-flex justify-content-between align-items-center ">
+
+     <div 
+     [ngClass]="{
+        'bg-success':(activeStep == step.title && index <= step.id),
+        'bg-leigh':(activeStep !=step.title && activeStep !== 'CONFIRM'),
+     }"
+     class="check-circle h-8 w-8 d-flex justify-content-center align-items-center"
+     >
+
+     <mat-icon>check_circle_outline</mat-icon>
+
+     </div>
+
+     <span class="title text-sm">
+        {{step.title}}
+     </span>
+
+     <div *ngIf="!last" class="lg:w-[13vw]">
+
+        <mat-divider [ngClass]="{
+            'text-success':activeStep==step.title,
+            'text-gray-500':activeStep!=step.title
+        }">
+    </mat-divider>
+
+     </div>
+
+    </div>
+
+</div>

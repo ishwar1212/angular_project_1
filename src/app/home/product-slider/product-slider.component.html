@@ -1,0 +1,14 @@
+<div class="">
+    <p class="">{{title}}</p>
+
+    <div class="d-flex flex-row justify-content-center">
+
+        <ng-container *ngFor="let item of products">
+
+            <app-product-card [products]="item" />
+
+        </ng-container>
+
+    </div>
+
+</div>

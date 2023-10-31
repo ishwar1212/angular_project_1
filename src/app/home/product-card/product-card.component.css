@@ -1,0 +1,105 @@
+
+.card img{
+    height: 300px;
+}
+
+.card:hover{
+    display: block;
+    overflow: hidden;
+    height: max-content;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0.75rem rgba(247, 83, 181, 0.3);
+     transition: transform 200ms ease-in-out;
+}
+ .card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
+
+.card-title{
+    height: 33px;
+    font-weight: 500;
+    padding-left: 14px;
+}
+.card-subtitle{
+    padding-bottom: 2px;
+    height: 24px;
+    font-weight: 400;
+    padding-left: 14px;
+
+}
+@media screen and (max-width:900px){
+    .card{
+        width: 140px;
+        margin-left: 4px !important;
+        overflow: hidden;
+
+    }
+    .card img{
+        height: 130px;
+    }
+    .cardbody{
+        line-height: 24px;
+        height: 40px;
+    }
+    .card-title{
+        height: 22px;
+        font-weight: 450;
+        padding-left: 8px;
+        font-size: 12px;
+    }
+    .card-subtitle{
+        height: 16px;
+        font-weight: 330;
+        padding-left: 8px;
+        font-size: 10px;
+    
+    }
+    .card button{
+        height: 28px;
+        font-size: 12px;
+        overflow: hidden;
+    }
+    .card-subtitle{
+        padding-bottom: 2px;
+      }
+
+}
+
+@media screen and (max-width:400px){
+    .card{
+        width: 110px;
+        margin-left: 6px !important;
+        overflow: hidden;
+
+    }
+    .card img{
+        height: 95px;
+    }
+    .cardbody{
+        height: 40px;
+        line-height: 18px;
+     
+    }
+    .card-title{
+        height: 22px;
+        font-weight: 450;
+        padding-left: 8px;
+        font-size: 12px;
+    }
+    .card-subtitle{
+        height: 16px;
+        font-weight: 330;
+        padding-left: 8px;
+        font-size: 10px;
+        
+    
+    }
+    .card button{
+        height: 28px;
+        font-size: 12px;
+        overflow: hidden;
+    }
+
+}

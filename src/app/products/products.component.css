@@ -1,0 +1,17 @@
+
+.container{
+    margin-top: 80px;
+}
+
+#logobutton{
+    font-weight: 500;
+
+}
+.products{
+    font-weight: 500;
+
+}
+.filter{
+    font-weight: 500;
+    cursor: pointer;
+}

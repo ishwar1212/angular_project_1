@@ -1,0 +1,80 @@
+<div class="mt-5">
+  <div class="d-flex justify-content-center align-items-center my-shadow my-border">
+  
+
+    <!------------- login form ---------->
+    
+    <form [formGroup]="myGroup"  (ngSubmit)="getUserByUsername()" >
+    
+      <h2 class="text-center">Login</h2>
+    
+      <!--------------- email ------------->
+      <div class="mb-3 col-sm-10 mt-2">
+        <label for="Email" class="mt-2" >UserName :</label>
+      <div class="col-sm-10 mb-3">
+    <input type="text" class="form-control" id="username" name="username" placeholder="enter your username" [(ngModel)]="userName"  [ngModelOptions]="{standalone: true}">
+    </div>
+     <!-- <div style="color:red;" *ngIf="email.errors?.['email'] && email.touched"> Please check your email</div>  -->
+      </div>
+    
+    <!-------------------- password --------------->
+    
+    <div class="mb-3 col-sm-10 mt-2">
+      <label for="password" class="form-label">Password:</label>
+      <input type="password" placeholder="enter your password" class="form-control " id="password" name="password" >
+       <!-- <div class="form-text text-danger" *ngIf="password.errors?.['required'] && ( password.touched)">
+         Password is required
+       </div>  -->
+    
+       <!-- <div class="form-text text-danger" *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength'] &&(password.touched)">
+        Password should be at least 6 and at the max 15 characters long.
+    
+      </div> -->
+    </div>
+    
+    <!------------------------- login button ----------->
+    
+    <div>
+       <button type="submit" class="d-block mx-auto btn btn-outline-primary">
+        Login
+      </button>
+    </div>
+    <div class="rglink mt-3">
+     <h5> You have not a account registered here <a routerLink="/resister">Register</a></h5>
+    </div>
+    </form>
+    </div>
+</div>
+
+ 
+<!-- <div>
+  <h1>User Search</h1>
+  <form (ngSubmit)="getUserByUsername()">
+    <label for="username">Enter Username:</label>
+    <input type="text" id="username" [(ngModel)]="userName" name="username" required />
+    <button type="submit">Search</button>
+  </form>
+
+  <div *ngIf="user">
+    <h2>User Profile</h2>
+    <ul>
+      <li><strong>Username:</strong> {{ user.userName }}</li>
+      <p>First Name : {{user.firstName}}</p>
+      <p>Last Name: {{user.lastName}}</p>
+      <p>Emai : {{user.email}}</p>
+      <p>Birth Date : {{user.birthdate}}</p>
+      <p>Mobile : {{user.mobile}}</p>
+      <p>Gender : {{user.gender}}</p>
+
+    </ul>
+  </div>
+
+  <div *ngIf="user === null">
+    <p>User not found.</p>
+  </div>
+
+  <div *ngIf="user === undefined">
+    <p>Click the "Search" button to search for a user.</p>
+  </div>
+</div> -->
+

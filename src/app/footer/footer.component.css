@@ -1,0 +1,27 @@
+:host{
+    display: block;
+    height: 4rem;
+}
+.d-flex{
+    background: rgb(234, 233, 233);
+}
+
+
+.footer> h3{
+    font-weight: 500;
+}
+.footer>p{
+    color: rgb(110, 109, 109);
+    margin-right: 15px;
+    margin-left: 12px;
+}
+.underline{
+    cursor: pointer;
+    color: rgb(110, 109, 109);
+    text-decoration: underline;
+}
+.footer{
+    margin-left: 5px;
+}
+
+    

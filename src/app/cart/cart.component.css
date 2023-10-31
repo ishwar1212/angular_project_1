@@ -1,0 +1,17 @@
+.box{
+    margin-top:60px;
+}
+.text-lg{
+    margin-top:6px;
+    width:100%;
+}
+
+.quantity{
+    margin-left: 5px;
+    margin-right: 5px ;
+    padding-top: 6px;
+}
+.font-semibold{
+    margin-left:5px;
+    padding-right:5px;
+}

@@ -1,0 +1,17 @@
+.check-circle{
+    border: 0.5px solid black hidden;
+    border-radius: 50%;
+}
+.order-tracker{
+    margin-top: 80px;
+}
+
+@media screen and(max-width:400){
+    .check-circle{
+        font-size: 12px;
+    }
+    .title{
+        font-size: 12px;
+    }
+    
+}

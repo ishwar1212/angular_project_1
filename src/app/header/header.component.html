@@ -1,0 +1,97 @@
+
+<div class="fixed w-100">
+
+  <div class="navbar d-flex aling-item-center justify-content-between">
+  
+      <div class="d-flex aling-item-center">
+          <div class="">
+              <img class="nav-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkV6ePM31_pvUTYF8fO-47iMg9sPioHe7kjw&usqp=CAU" alt="logo img">
+          </div>
+      
+          <div class="d-flex aling-item-center justify-content-center">
+              <div class="d-flex space-x-4">
+                  <a routerLink="/home" class="navname">Shoping Point</a>
+              </div>
+          </div>
+      </div>
+     
+  
+      <div class="navbar2 d-flex aling-item-center">
+      
+          <button color="primary" aria-label="Exampel icon button with a shopping_cart icon" routerLink="/cart"
+          mat-icon-button
+          >
+          <mat-icon>shopping_cart</mat-icon>
+          </button>
+          <button *ngIf="true" class="login-btn"
+          mat-raised-button 
+          type=""
+          color="red">
+          <a routerLink="/login">LOGIN</a>
+          </button>
+  
+          <div *ngIf="true" class="relative ml-3 d-flex aling-item-center">
+  
+              <div class="d-flex aling-item-center">
+                  <span class="font-bold">Ishwar</span>
+                  <button mat-button [matMenuTriggerFor]="profileMenu" id="logobutton">
+                      <img class="profilelogo" src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_1280.png" alt="">
+                  </button>
+                  <mat-menu #profileMenu="matMenu">
+                      <button (click)="navigateTo('account/orders')" mat-menu-item>Orders</button>
+                      <button mat-menu-item>Profile</button>
+                      <button mat-menu-item>Logout</button>
+                      <button (click)="navigateTo('admin')" mat-menu-item>Admin</button>
+  
+                  </mat-menu>
+  
+              </div>
+  
+          </div>
+  
+      </div>
+  </div>
+  
+  </div>
+<!--   
+  <div *ngIf="isNavbarContentOpen" class="modal-container mt-5" >
+  
+      <app-navcontent [selectedSection] = "currentSection"/>
+  
+  </div> -->
+
+<!-- 
+
+<div id="hearder" class="my-rounded-corner my-shadow my-border">
+  <nav class="nav-manu">
+    <div class="nav-icon d-flex justify-content-center aling-item-center">
+      
+      <h3 > <i class="fa-solid fa-cart-shopping"></i> Shoping Point</h3>
+    </div>
+      <ul id="">
+        <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>     
+        <li><a routerLink="/login">login</a></li>
+       
+        <li><a routerLink="/cart"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="cart"></mat-icon>
+        </a></li>
+          <i class="fa-solid fa-xmark" ></i> 
+    </ul>
+    <div class="flex aling-item-center space-x-5">
+      <span class="font-bold text-lg">IB</span>
+      <button mat-button [matMenuTriggerFor]="profileMenu">
+          <img class="profilelogo" src="https://cdn.pixabay.com/photo/2018/08/28/12/41/avatar-3637425_1280.png" alt="">
+      </button>
+      <mat-menu #profileMenu="matMenu">
+          <button mat-menu-item>Orders</button>
+          <button mat-menu-item>Profile</button>
+          <button mat-menu-item>Logout</button>
+
+      </mat-menu>
+
+  </div>
+
+      <i id="manu-bar" class="fa-solid fa-bars" (click)="opennav()"></i>
+  </nav>
+</div>  -->

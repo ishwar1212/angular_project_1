@@ -1,0 +1,8 @@
+body{
+    margin-top: 2rem;
+    padding: 1rem;
+    z-index: 1;
+}
+.heardercomp{
+    background: rgb(240, 239, 239);
+}

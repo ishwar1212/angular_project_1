@@ -1,0 +1,32 @@
+<div>
+    <h1>Search User Profile</h1>
+    <form (ngSubmit)="getUserByUsername()">
+      <label for="username">Enter Username:</label>
+      <input type="text" id="username" [(ngModel)]="userName" name="username" required />
+      <button type="submit">Search</button>
+    </form>
+  
+    <div *ngIf="user">
+      <h2>User Profile</h2>
+      <ul>
+        <img src="#" alt="Profile Image">
+        <p><strong>Username:</strong> {{ user.userName }}</p>
+        <p>First Name : {{user.firstName}}</p>
+        <p>Last Name: {{user.lastName}}</p>
+        <p>Emai : {{user.email}}</p>
+        <p>Birth Date : {{user.birthdate}}</p>
+        <p>Mobile : {{user.mobile}}</p>
+        <p>Gender : {{user.gender}}</p>
+  
+      </ul>
+    </div>
+  
+    <div *ngIf="user === null">
+      <p>User not found.</p>
+    </div>
+  
+    <div *ngIf="user === undefined">
+      <p>Click the "Search" button to search for a user.</p>
+    </div>
+  </div>
+  

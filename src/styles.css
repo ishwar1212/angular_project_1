@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.my-container{
+    max-width: 1500px;
+}
+.box{
+    box-shadow: #f43aa3 0px 5px 10px;
+    padding: 15px;
+}
+.my-rounded-corner{
+    border-radius: 1rem;
+}
+.m0dal-backdrop.fade.show{
+    z-index: 19;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

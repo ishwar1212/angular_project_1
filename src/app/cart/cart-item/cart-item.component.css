@@ -1,0 +1,38 @@
+.quantity{
+    margin-left: 5px;
+    margin-right: 5px ;
+    padding-top: 6px;
+}
+.font-semibold{
+    margin-left:5px;
+    padding-right:5px;
+}
+
+
+@media screen and (min-width: 760px){
+    .cart-item-img{
+        object-position: cover;
+        height: 120px;
+       
+
+    }
+    .cart-item-info{
+        font-size: 16px;
+       
+    }
+
+}
+
+@media screen and (max-width: 460px){
+    .cart-item-img{
+        object-position: cover;
+        height: 110px;
+       
+
+    }
+    .cart-item-info{
+        font-size: 14px;
+       
+    }
+}
+    

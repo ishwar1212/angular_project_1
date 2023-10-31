@@ -1,0 +1,39 @@
+<div class=" m-2">
+
+    <div class="row  w-100 productCard">
+        <div class=" product-card-img  cursor-pointer d-flex justify-content-around " *ngFor="let product of products">
+
+            <div class="d-flex align-items-center justify-content-center p-3 col-3 w-40">
+             <img src="../../../assets/images/mobiles/iphone.jpg" alt="Product Image">
+            </div>
+         <div class="textPart p-2 m-3 col-7 w-90">
+ 
+             <div class="pt-10 ">
+ 
+                 <p class="opacity-80">{{product.brand}}</p>
+                 <p>{{product.name}}</p>
+                 <p>{{product.description}}</p>
+ 
+             </div>
+ 
+             <div class="d-flex flex-wrap space-x-2 align-items-center px-1 ">
+ 
+                 <p class="font-weight-bold text-success text-decoration-line-through ">₹110000</p>
+                 <p class="text-gray px-1 ">₹{{product.price}}</p>
+                 <p class="px-1">5% off</p>
+ 
+             </div>
+             <div class="card-footer d-grid text-center  w-90">
+                 <button class="btn btn-outline-success" (click)="addToCart(product)">Add to cart</button>  
+             </div>
+          
+ 
+         </div>
+       
+         
+     </div>
+    </div>
+
+ 
+
+</div>

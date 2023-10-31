@@ -1,0 +1,220 @@
+<!-- <div class="my-container mx-auto  border-dark d-flex justify-content-center align-itenms-center">
+    <div class="  my-rounded-corner">
+        <h3 class="w-35 border text-center my-rounded-corner">Current Cart</h3>
+        <div class="">
+            <div class="w-80 mb-3" id="cart-table">
+                    <div class="cart-table mt-5" id="cart">
+                        <div class="cart-product">
+                            <table class="table table responsive w-60 mx-auto table-bordered table-hover my-shadow">
+                            <thead>
+                                <tr >
+                                  <th>product name</th>
+                                    <th>product image</th>
+                                    <th>price</th>
+                                    <th>quantity</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of cartItems" class="text-center m-2" >
+                                    <td class="text-center">{{item.name}}</td>
+                                    <td><img src="{{item.img}}" style="height: 100px;" alt="cart item img"></td>
+                                    <td class="text-center">{{item.amt}}</td>
+                                    <td class="text-center">{{item.qnt}}</td>
+                                    <td><button class="btn btn-danger" (click)="removeCartItem(item)">remove cart</button></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   <div class="cart-btn " style="margin-left: 25%;"> <button class="btn btn-outline-success border text-center my-rounded-corner" style="width: 60%; font-weight:700;" type="button">Order Now</button></div>
+              
+            <table class="table w-50 mx-auto table-bordered table-hover my-shadow mt-5">
+                <tbody>
+                    <tr >
+                        <td></td>
+                        <td class="fs-5 fw-bold"></td>
+                    </tr>
+                    <tr >
+                        <td>Total Price</td>
+                        <td class="fs-5 fw-bold text-danger"></td>
+                    </tr>
+                    <tr>
+                        <td>Shoping  Charges</td>
+                        <td class="fs-5 fw-bold text-danger">1,000</td>
+                    </tr>
+                    <tr>
+                        <td>Discount </td>
+                        <td class="fs-5 fw-bold text-success">200</td>
+                    </tr>
+                    <tr>
+                        <td>You Have to Pay</td>
+                        <td class="fs-5 fw-bold text-success">10,800</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <button class="btn btn-danger">remove</button>
+                    </tr>
+                </tfoot>
+            </table>
+       
+        </div>
+    </div>
+    <div class="current-card-item w-75 mx-auto mt-5">
+        <h4>Card Item</h4>
+        <div class="row mt-4 g-0">
+            <div class="col-6 py-3 px-2">
+                <div class="cart-item">
+                    <td></td>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-5  border my-rounded-corner">
+        <h3 class="w-25 border text-center py-2 mb-5 my-rounded-corner">Previous Carts</h3>
+        <div class="cart mb=5"></div>
+        <div class="card-header d-flex fw-bold justify-content-between align-itenms-center">
+            <span class="time">Ordered On: <span class="fs-5">18 jully 2023</span></span>
+            <span class="count">Items : 5</span>
+            <span class="price">Price Paid; <span class="fs-5">10,000</span></span>
+        </div>
+        <div class="cart-body px-4 py-2">
+            <div class="row g-0">
+                <div class="col-2 px-2 py-2" >
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="mt-30">
+
+    <div class="row d-flex justify-content-between">
+
+        <section class="col-lg-8 col-sm-12 mt-20">
+
+            <div class="box p-3">
+
+                <ng-container *ngIf="cart">
+
+                    <div *ngFor="let product of cart; let last=last">
+                        <div class="p-3 shadow-lg mt-20">
+
+                            <div class="d-flex align-itenms-center" >
+                        
+                                <div class="cart-item">
+                        
+                                    <img class="cart-item-img" alt="Cart Product Image">
+                        
+                                </div>
+                        
+                                 <div class="cart-item-info p-3">
+                        
+                                    <p>{{product.name}}</p>
+                                    <p class="text-gray">{{product.color}}</p>
+                                    <div class="d-flex pricing aling-items-center pt-3">
+                        
+                                        <p class="text-gray ">₹{{product.price}}</p>
+                                        <p class="font-semibold text-decoration-line-through ">₹4999</p>
+                                          <p class="text-success font-semibold ">10%</p>
+                                   
+                        
+                                    </div>
+                        
+                                </div>  
+                        
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="d-flex align-itenms-center justify-content-between mb-4 pt-2">
+                        
+                            <div class="d-flex align-itenms-center space-x-2">
+                        
+                                <div class="example-button-container">
+                        
+                                    <button mat-mini-fab color="accent" (click)="updateCartItem(-1)" [disabled]="true">
+                                        <mat-icon>remove</mat-icon>
+                                    </button>
+                        
+                                </div>
+                                <span class="quantity ">
+                                    1
+                        
+                                </span>
+                        
+                                <div class="example-button-container">
+                        
+                                    <button mat-mini-fab color="accent" (click)="updateCartItem(+1)" [disabled]="false">
+                                        <mat-icon>add</mat-icon>
+                                    </button>
+                        
+                                </div>
+                        
+                        
+                            </div >
+                            <div *ngFor="let i = index">
+                            <button  (click)="removeFromCart(i)" color="accent" mat-stroked-button>Remove</button>
+                        </div>
+                        
+                        </div>                    <mat-divider *ngIf="!last"></mat-divider>
+
+                    </div>
+
+                </ng-container>
+
+            </div>
+
+        </section>
+
+        <section class="col-lg-4 col-sm-12 sticky top-0 h-[100vh] mt-5 lg:mt-0">
+
+            <ng-container *ngIf="cart">
+                <div  class="box p-5 rounded-md">
+
+                    <p class="font-bold text-gray pb-4">PRICE DETAILS</p>
+                    <mat-divider/>
+
+                    <div class="space-y-3">
+
+                        <div class="d-flex justify-content-between pt-3">
+
+                            <span>Total Price</span>
+                            <span>6999</span>
+
+                        </div>
+                        <div class="d-flex justify-content-between pt-3">
+
+                            <span>Discount</span>
+                            <span class="text-success">-3999</span>
+
+                        </div>
+                        <div class="d-flex justify-content-between pt-3">
+
+                            <span>Delivery  Charges</span>
+                            <span class="text-success">Free</span>
+
+                        </div>
+                        <div class="d-flex justify-content-between font-semibold text-lg">
+
+                            <span>Total Amount</span>
+                            <span class="text-success">2999</span>
+
+                        </div>
+
+                    </div>
+                    <button (click)="navigateToCheckout()" class="text-lg mt-8 p-28 px-10" style="padding:1.5rem; "
+                    mat-raised-button
+                    >CHECKOUT</button>
+
+                </div>
+            </ng-container>
+
+        </section>
+
+
+    </div>
+
+</div>
